@@ -15,11 +15,37 @@ class ViewController: UIViewController {
     
     var locationManagerDelegate: LocationManagerDelegate?
     
+    var resultSearchController: UISearchController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setLocationManager()
+        setSearchController()
+        setSearchBar()
+    }
+    
+    private func setLocationManager() {
         locationManagerDelegate = LocationManagerDelegate(vC: self)
         locationManagerDelegate?.setUp()
+    }
+    
+    private func setSearchController() {
+        let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "LocationSearchTable") as! LocationSearchTable
+        resultSearchController = UISearchController(searchResultsController: locationSearchTable)
+        resultSearchController?.searchResultsUpdater = locationSearchTable as UISearchResultsUpdating
+        
+        resultSearchController?.hidesNavigationBarDuringPresentation = false
+        definesPresentationContext = true
+        
+        locationSearchTable.mapView = mapView
+    }
+    
+    private func setSearchBar() {
+        let searchBar = resultSearchController!.searchBar
+        searchBar.sizeToFit()
+        searchBar.placeholder = "Search for places"
+        navigationItem.searchController = resultSearchController
     }
 
 
