@@ -15,6 +15,7 @@
 		E4A8AF2224364CE40026E1DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4A8AF2024364CE40026E1DC /* LaunchScreen.storyboard */; };
 		E4A8AF2A24364D6D0026E1DC /* LocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8AF2924364D6D0026E1DC /* LocationManagerDelegate.swift */; };
 		E4A8AF2C2436521D0026E1DC /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8AF2B2436521D0026E1DC /* LocationSearchTable.swift */; };
+		E4A8AF2E24365B260026E1DC /* MapSearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8AF2D24365B260026E1DC /* MapSearchDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		E4A8AF2324364CE40026E1DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4A8AF2924364D6D0026E1DC /* LocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerDelegate.swift; sourceTree = "<group>"; };
 		E4A8AF2B2436521D0026E1DC /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
+		E4A8AF2D24365B260026E1DC /* MapSearchDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				E4A8AF2324364CE40026E1DC /* Info.plist */,
 				E4A8AF2924364D6D0026E1DC /* LocationManagerDelegate.swift */,
 				E4A8AF2B2436521D0026E1DC /* LocationSearchTable.swift */,
+				E4A8AF2D24365B260026E1DC /* MapSearchDelegate.swift */,
 			);
 			path = UIMapKit;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4A8AF1A24364CE10026E1DC /* ViewController.swift in Sources */,
+				E4A8AF2E24365B260026E1DC /* MapSearchDelegate.swift in Sources */,
 				E4A8AF2C2436521D0026E1DC /* LocationSearchTable.swift in Sources */,
 				E4A8AF2A24364D6D0026E1DC /* LocationManagerDelegate.swift in Sources */,
 				E4A8AF1624364CE10026E1DC /* AppDelegate.swift in Sources */,

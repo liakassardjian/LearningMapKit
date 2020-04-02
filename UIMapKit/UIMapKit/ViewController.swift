@@ -9,11 +9,16 @@
 import UIKit
 import MapKit
 
+protocol HandleMapSearch {
+    func dropPinZoomIn(placemark:MKPlacemark)
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     
     var locationManagerDelegate: LocationManagerDelegate?
+    var mapSearchDelegate: MapSearchDelegate?
     
     var resultSearchController: UISearchController?
     
@@ -39,6 +44,9 @@ class ViewController: UIViewController {
         definesPresentationContext = true
         
         locationSearchTable.mapView = mapView
+        
+        mapSearchDelegate = MapSearchDelegate(vC: self)
+        locationSearchTable.handleMapSearchDelegate = mapSearchDelegate
     }
     
     private func setSearchBar() {
@@ -47,7 +55,5 @@ class ViewController: UIViewController {
         searchBar.placeholder = "Search for places"
         navigationItem.searchController = resultSearchController
     }
-
-
 }
 
