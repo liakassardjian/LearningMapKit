@@ -28,7 +28,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Search map" id="gIc-P5-vjX"/>
+                    <navigationItem key="navigationItem" title="Search map" id="gIc-P5-vjX">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="location.fill" catalog="system" id="Vs5-LD-BYS">
+                            <connections>
+                                <action selector="markCurrentLocation:" destination="BYZ-38-t0r" id="ExZ-0M-noM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="Qzx-Tl-G1P" id="m8T-mk-FaE"/>
                     </connections>
@@ -100,4 +106,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="location.fill" catalog="system" width="128" height="115"/>
+    </resources>
 </document>

@@ -14,9 +14,11 @@ class LocationManagerDelegate: NSObject, CLLocationManagerDelegate {
     weak var viewController: ViewController?
     
     let locationManager = CLLocationManager()
+    var coordinates: CLLocationCoordinate2D
     
     init(vC: ViewController) {
         self.viewController = vC
+        coordinates = CLLocationCoordinate2D(latitude: 0, longitude: 0)
     }
     
     public func setUp() {
@@ -28,6 +30,8 @@ class LocationManagerDelegate: NSObject, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
+            coordinates = location.coordinate
+            
             let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
             let region = MKCoordinateRegion(center: location.coordinate, span: span)
             viewController?.mapView.setRegion(region, animated: true)

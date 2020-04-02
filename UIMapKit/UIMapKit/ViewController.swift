@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 protocol HandleMapSearch {
-    func dropPinZoomIn(placemark:MKPlacemark)
+    func dropPinZoomIn(placemark: MKPlacemark)
 }
 
 class ViewController: UIViewController {
@@ -55,5 +55,12 @@ class ViewController: UIViewController {
         searchBar.placeholder = "Search for places"
         navigationItem.searchController = resultSearchController
     }
+    
+    @IBAction func markCurrentLocation(_ sender: Any) {
+        guard let coordinates = locationManagerDelegate?.coordinates else { return }
+        let placemark = MKPlacemark(coordinate: coordinates)
+        mapSearchDelegate?.dropPinZoomIn(placemark: placemark)
+    }
+    
 }
 
