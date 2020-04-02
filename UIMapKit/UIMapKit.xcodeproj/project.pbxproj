@@ -65,13 +65,13 @@
 				E4A8AF1524364CE10026E1DC /* AppDelegate.swift */,
 				E4A8AF1724364CE10026E1DC /* SceneDelegate.swift */,
 				E4A8AF1924364CE10026E1DC /* ViewController.swift */,
+				E4A8AF2924364D6D0026E1DC /* LocationManagerDelegate.swift */,
+				E4A8AF2B2436521D0026E1DC /* LocationSearchTable.swift */,
+				E4A8AF2D24365B260026E1DC /* MapSearchDelegate.swift */,
 				E4A8AF1B24364CE10026E1DC /* Main.storyboard */,
 				E4A8AF1E24364CE40026E1DC /* Assets.xcassets */,
 				E4A8AF2024364CE40026E1DC /* LaunchScreen.storyboard */,
 				E4A8AF2324364CE40026E1DC /* Info.plist */,
-				E4A8AF2924364D6D0026E1DC /* LocationManagerDelegate.swift */,
-				E4A8AF2B2436521D0026E1DC /* LocationSearchTable.swift */,
-				E4A8AF2D24365B260026E1DC /* MapSearchDelegate.swift */,
 			);
 			path = UIMapKit;
 			sourceTree = "<group>";

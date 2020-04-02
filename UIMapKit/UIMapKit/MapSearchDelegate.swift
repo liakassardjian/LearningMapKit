@@ -9,6 +9,10 @@
 import Foundation
 import MapKit
 
+protocol HandleMapSearch {
+    func dropPinZoomIn(placemark: MKPlacemark)
+}
+
 class MapSearchDelegate: HandleMapSearch {
     
     weak var viewController: ViewController?
@@ -32,6 +36,7 @@ class MapSearchDelegate: HandleMapSearch {
             let state = placemark.administrativeArea {
             annotation.subtitle = "\(city), \(state)"
         }
+        
         mapView.addAnnotation(annotation)
         let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
         let region = MKCoordinateRegion(center: placemark.coordinate, span: span)
