@@ -9,8 +9,15 @@
 import Foundation
 import MapKit
 
-class LocationDelegate: NSObject, CLLocationManagerDelegate {
+class LocationManagerDelegate: NSObject, CLLocationManagerDelegate {
+    
+    weak var viewController: ViewController?
+    
     let locationManager = CLLocationManager()
+    
+    init(vC: ViewController) {
+        self.viewController = vC
+    }
     
     public func setUp() {
         locationManager.delegate = self
@@ -21,7 +28,9 @@ class LocationDelegate: NSObject, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
-            print("location: \(location)")
+            let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+            let region = MKCoordinateRegion(center: location.coordinate, span: span)
+            viewController?.mapView.setRegion(region, animated: true)
         }
     }
     
