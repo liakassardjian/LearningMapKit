@@ -28,8 +28,6 @@ class ViewController: UIViewController {
         setLocationManager()
         setSearchController()
         setSearchBar()
-        
-        navigationController?.navigationItem.title = "Search map"
     }
     
     private func setLocationManager() {

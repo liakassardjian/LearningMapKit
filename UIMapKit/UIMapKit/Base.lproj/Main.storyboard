@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Search map-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIMapKit" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,19 +16,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Qzx-Tl-G1P">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Qzx-Tl-G1P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PIl-Ch-3N3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qzx-Tl-G1P" secondAttribute="trailing" id="QqF-CP-bX6"/>
+                            <constraint firstItem="Qzx-Tl-G1P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PIl-Ch-3N3"/>
+                            <constraint firstAttribute="trailing" secondItem="Qzx-Tl-G1P" secondAttribute="trailing" id="QqF-CP-bX6"/>
                             <constraint firstItem="Qzx-Tl-G1P" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TWw-r8-wdG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qzx-Tl-G1P" secondAttribute="bottom" id="WwY-L1-I02"/>
+                            <constraint firstAttribute="bottom" secondItem="Qzx-Tl-G1P" secondAttribute="bottom" id="WwY-L1-I02"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="AU9-ag-mkI"/>
+                    <navigationItem key="navigationItem" title="Search map" id="gIc-P5-vjX"/>
                     <connections>
                         <outlet property="mapView" destination="Qzx-Tl-G1P" id="m8T-mk-FaE"/>
                     </connections>
